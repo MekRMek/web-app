@@ -7,30 +7,39 @@
 </head>
 <body> 
   <header>
-  <nav>
-    <ul class="menu">
-      <li>
-        <a href="index.html">
-          <img src="images/home.jpg" width="30" alt="Գլխաւոր" class="menu-icon">
-          Գլխաւոր
-        </a>
-      </li>
-      <li>
-        <a href="about.html">
-          <img src="images/info-button.jpg" width="30" alt="Մեր մասին" class="menu-icon">
-          Մեր մասին
-        </a>
-      </li>
-      <li>
-        <a href="contact.html">
-          <img src="images/network.jpg" width="30" alt="Կապ" class="menu-icon">
-          Կապ
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M7.207 1a1 1 0 0 0-1.414 0L.146 6.646a.5.5 0 0 0 .708.708L1 7.207V12.5A1.5 1.5 0 0 0 2.5 14h.55a2.5 2.5 0 0 1-.05-.5V9.415a1.5 1.5 0 0 1-.56-2.475l5.353-5.354z"/>
+              <path d="M8.793 2a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708z"/>
+            </svg>
+            Գլխաւոր
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+            </svg>
+            Մեր մասին
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+              <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+            </svg>
+            Կապ
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <main class="card-main">
+  <main>
+    <div class="card-main">
     <div class="contact-card">
     <h2>Կապ մեզ հետ</h2>
     <form>
@@ -38,9 +47,46 @@
       <label>Ազգանուն:<br><input type="text" name="name" required></label><br>
       <label>Եղ․ հասցէ:<br><input type="email" name="email" required></label><br>
       <label>Հաղորդագրութիւն:<br><textarea name="message" rows="5" class="message" required></textarea></label><br>
-      <button type="submit">Հաստատել</button>
-    </div>
+      <div class="button-section">
+        <button type="submit">Հաստատել</button>
+      </div>
     </form>
+  </div>
   </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section-about">
+        <h3>Իմ կայքը</h3>
+        <p>Այս կայքը ուսումնական նախագիծ է, որը ներկայացնում է առցանց խանութների մասին տեղեկատուութիւն։</p>
+      </div>
+      <div class="footer-section-links">
+        <h4>Աւգտակար յղումներ</h4>
+        <ul>
+          <li><a href="index.html">Գլխաւոր</a></li>
+          <li><a href="about.html">Մեր Մասին</a></li>
+          <li><a href="contact.html">Կապ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section-contact">
+        <h4>Կապ մեզ հետ</h4>
+        <p>📧 rafael.khachatryan@realschool.education</p>
+        <p>📞 +374 95 77 67 60</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Առցանց խանութներ․ Բոլոր իրաւունքները պաշտպանուած են</p>
+    </div>
+  </div>
+  </footer>
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 10) {
+        header.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+      }
+    });
+  </script>
 </body>
 </html>
